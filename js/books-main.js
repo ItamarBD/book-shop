@@ -17,7 +17,7 @@ function renderBooks() {
             <td class="book-name">${book.bookName}</td>
             <td>${book.price}</td>
             <td class="actions" >
-              <button type="button" class="btn btn-dark read" onclick="onRead(${book.id})">Read</button>
+              <button type="button" data-trans="read" class="btn btn-dark read" onclick="onRead(${book.id})">Read</button>
               <button type="button" class="btn btn-dark update" onclick="readAndUpdateBook('${book.id}')">Update</button>
               <button type="button" class="btn btn-dark delete" onclick="onDeleteBook('${book.id}')">Delete</button>
             </td>
@@ -86,5 +86,16 @@ function wcqib_refresh_quantity_increments() {
       var c = jQuery(b);
       c.addClass("buttons_added"), c.children().first().before('<input type="button" value="-" class="minus" />'), c.children().last().after('<input type="button" value="+" class="plus" />')
   })
+}
+
+function onChangeLang(lang) {
+  setLang(lang);
+  if (lang === 'he') {
+    document.body.classList.add('rtl')
+  } else {
+      document.body.classList.add('rtl')
+  }
+  traslate();
+  renderBooks();
 }
 
