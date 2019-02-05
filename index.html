@@ -26,9 +26,9 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Book name</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Actions</th>
+                    <th scope="col" data-trans="book-name">Book name</th>
+                    <th scope="col" data-trans="price">Price</th>
+                    <th scope="col" data-trans="actions">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -46,20 +46,20 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="onCloseModal()">
+                    <button type="button"  class="close" data-dismiss="modal" aria-label="Close" onclick="onCloseModal()">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <div class="img">
                         
-                    </div>
-                    <p class="price"></p>
+                    </div >
+                   <span data-trans="priceModal">Price: </span><span class="price"></span>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="onCloseModal()">Close</button>
+                    <button type="button" data-trans="closeBtn" class="btn btn-secondary" data-dismiss="modal" onclick="onCloseModal()">Close</button>
                     <div class="quantity buttons_added">
-                        <h4>Rate</h4>
+                        <h4 data-trans="rateBtn">Rate</h4>
                         <input type="button" value="-" class="minus">
                         <input type="number" step="1" min="0" max="10" name="quantity" value="0" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
                         <input type="button" value="+" class="plus">

@@ -12,11 +12,42 @@ var gTrans = {
       en: "Add new book",
       he: "הוסף ספר"
   },
-  Read: {
+  detailsBtn: {
       en: 'Read',
       he: 'פרטים'
+  },
+  updateBtn: {
+      en: 'Update',
+      he: 'עדכן'
+  },
+  deleteBtn: {
+      en: 'Delete',
+      he: 'מחק'
+  },
+  rateBtn: {
+      en: 'Rate',
+      he: 'דרג'
+  },
+  'book-name': {
+      en: 'Book name',
+      he: 'שם הספר'
+  },
+  price: {
+      en: 'Price',
+      he: 'מחיר'
+  },
+  actions: {
+      en: 'Actions',
+      he: 'פעולות'
+  },
+  closeBtn: {
+      en: 'Close',
+      he: 'סגור'
+  },
+  priceModal: {
+      en: 'Price:',
+      he: 'מחיר: '
   }
-
 }
 
 var gCurrLang = 'en';

@@ -17,9 +17,9 @@ function renderBooks() {
             <td class="book-name">${book.bookName}</td>
             <td>${book.price}</td>
             <td class="actions" >
-              <button type="button" data-trans="read" class="btn btn-dark read" onclick="onRead(${book.id})">Read</button>
-              <button type="button" class="btn btn-dark update" onclick="readAndUpdateBook('${book.id}')">Update</button>
-              <button type="button" class="btn btn-dark delete" onclick="onDeleteBook('${book.id}')">Delete</button>
+              <button type="button" data-trans="detailsBtn" class="btn btn-dark read" onclick="onRead(${book.id})">Details</button>
+              <button type="button" data-trans="updateBtn" class="btn btn-dark update" onclick="readAndUpdateBook('${book.id}')">Update</button>
+              <button type="button" data-trans="deleteBtn" class="btn btn-dark delete" onclick="onDeleteBook('${book.id}')">Delete</button>
             </td>
         </tr>`
 
@@ -54,7 +54,7 @@ function onRead(bookId) {
 
   $('.modal-title').text(name);
   $('.img').html(`<img src="img/${bookId}.jpg">`);
-  $('.price').html(`Price: ${gBooks[bookId - 1].price}`);
+  $('.price').html(`${gBooks[bookId - 1].price}`);
   $('.modal').show();
 
   String.prototype.getDecimals || (String.prototype.getDecimals = function() {
@@ -95,7 +95,7 @@ function onChangeLang(lang) {
   } else {
       document.body.classList.add('rtl')
   }
-  traslate();
   renderBooks();
+  traslate();
 }
 
